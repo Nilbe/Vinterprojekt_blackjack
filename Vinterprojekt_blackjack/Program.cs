@@ -5,6 +5,7 @@ Console.ReadLine();
 
 
 bet();
+Console.ReadLine();
 
 static void bet()
 {
@@ -20,35 +21,36 @@ static void bet()
         string input = Console.ReadLine();
 
         success = int.TryParse(input, out bet);
-    
+
     }
 
     if(success == true)
     {
-        if(bet > maxBet || bet < minBet)
+        if(bet <= maxBet && bet >= minBet)
         {
-            Console.WriteLine("You need to bet a amout of money that you have");
+            Console.WriteLine("You have bet " + bet + " moneys");
         }
         else
         {
-            Console.WriteLine("You have bet " + bet + " moneys");
+            Console.WriteLine("You need to bet a amout of money that you have");
         }
     }
 }
 
-deal();
 
-static void deal()
-{
-    Random generator = new Random();
 
-    Console.WriteLine("Press enter to begin");
-    Console.ReadLine();
 
-    int yourCards = 0;
-    int dealersCards = 0;
-    int yourCardsDrawn;
-    int dealersCardsDrawn;
+Random generator = new Random();
+
+Console.WriteLine("Press enter to begin");
+Console.ReadLine();
+
+
+
+int yourCards = 0;
+int dealersCards = 0;
+int yourCardsDrawn;
+int dealersCardsDrawn;
     
     while(yourCards < 21 && dealersCards < 21)
     {
@@ -85,7 +87,7 @@ if(dealersCards > 21)
 {
     Console.WriteLine("Dealer bust! You win!");
 }
-}
+
 
 
 Console.ReadLine();
