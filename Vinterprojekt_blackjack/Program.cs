@@ -104,11 +104,7 @@ while(gameState1 != "beting" && gameState2 != "dealing")
 {
     if(gameState3 == "end")
     {
-        if(yourCards > 21)
-        {
-            
-        }
-
+        
     }
 }
 
