@@ -1,20 +1,11 @@
 ﻿using System;
 
-string gameState1 = "beting";
-string gameState2 = "dealing";
-string gameState3 = "end";
-
 Console.WriteLine("Welcome to blackjack, press enter to start");
 Console.ReadLine();
 
-while(gameState2 != "delaing" && gameState3 != "end")
-{
-    if(gameState1 == "beting")
-    {
+
         bet();
         Console.ReadLine();
-    }
-}
 
 static void bet()
 {
@@ -45,10 +36,9 @@ static void bet()
 }
 
 
-while(gameState1 != "beting" && gameState3 != "end")
-{
-    if(gameState2 == "dealing")
-    {
+
+    
+
         Console.WriteLine("Press enter to begin");
         Console.ReadLine();
 
@@ -79,7 +69,6 @@ while(gameState1 != "beting" && gameState3 != "end")
             Console.WriteLine("You stand on " + yourCards);
             Console.ReadLine();
             
-            gameState3 = "end";
         }
         else
         {
@@ -88,25 +77,18 @@ while(gameState1 != "beting" && gameState3 != "end")
     }
     if(yourCards > 21)
     {
-        Console.WriteLine("Your cards total " + yourCards);
-        Console.ReadLine();
+        Console.WriteLine("You BUST!");
         
-        gameState3 = "end";
+        
+    
     }
     if(dealersCards > 21)
     {
-        gameState3 = "end";
+        Console.WriteLine("Dealer BUST!");
     }
-    }
-}
+    
 
-while(gameState1 != "beting" && gameState2 != "dealing")
-{
-    if(gameState3 == "end")
-    {
-        
-    }
-}
+
 
 
 Console.ReadLine();
