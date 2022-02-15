@@ -1,5 +1,6 @@
 ﻿using System;
 
+//start
 Console.WriteLine("Welcome to blackjack, press enter to start");
 Console.ReadLine();
 
@@ -7,6 +8,7 @@ Console.ReadLine();
         bet();
         Console.ReadLine();
 
+//håller koll på hur mycket man betar
 static void bet()
 {
     int money = 10;
@@ -37,7 +39,7 @@ static void bet()
 
 
 
-    
+    //efter man betat så kommer spelet att börja och man slumpar fram kort
 
         Console.WriteLine("Press enter to begin");
         Console.ReadLine();
@@ -55,7 +57,7 @@ static void bet()
         string hitOrStand = Console.ReadLine();
         
         hitOrStand = hitOrStand.ToLower();
-        
+            
         if(hitOrStand == "h")
         {
             yourCardsDrawn = generator.Next(2,11);
@@ -82,7 +84,7 @@ static void bet()
         
     
     }
-    if(dealersCards > 21)
+    else if(dealersCards > 21)
     {
         Console.WriteLine("Dealer BUST!");
     }
