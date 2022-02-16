@@ -5,8 +5,8 @@ Console.WriteLine("Welcome to blackjack, press enter to start");
 Console.ReadLine();
 
 
-        bet();
-        Console.ReadLine();
+bet();
+Console.ReadLine();
 
 //håller koll på hur mycket man betar
 static void bet()
@@ -22,7 +22,7 @@ static void bet()
         string input = Console.ReadLine();
 
         success = int.TryParse(input, out bet);
-    }
+    
 
     if(success == true)
     {
@@ -34,6 +34,7 @@ static void bet()
         {
             Console.WriteLine("You need to bet a amout of money that you have");
         }
+    }
     }
 }
 
@@ -70,7 +71,6 @@ static void bet()
         {
             Console.WriteLine("You stand on " + yourCards);
             Console.ReadLine();
-            
         }
         else
         {
@@ -79,18 +79,11 @@ static void bet()
     }
     if(yourCards > 21)
     {
-        Console.WriteLine("You BUST!");
-        
-        
-    
+        Console.WriteLine("You LOSE!");
     }
     else if(dealersCards > 21)
     {
-        Console.WriteLine("Dealer BUST!");
+        Console.WriteLine("Dealer LOST!");
     }
-    
-
-
-
 
 Console.ReadLine();
